@@ -1,0 +1,563 @@
+*,
+body
+{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scrollbar-color: default transparent;
+    scrollbar-width: thin;
+}
+
+body.over-hide
+{
+    overflow: hidden;
+}
+
+:root
+{
+    --navbg: rgb(36, 36, 36);
+}
+
+::-webkit-scrollbar
+{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background: rgb(156, 156, 156);
+	border-right: 5px;
+	border-radius: 4px;
+    box-shadow: inset 0 0 6px rgba(131, 131, 131, 0.3);
+    transition-duration: 2s;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active
+{
+    background: gray;
+}
+
+@font-face
+{
+    font-family: 'launch';
+    src: url('../fonts/sleek-1.ttf');
+}
+
+@font-face
+{
+    font-family: 'head';
+    src: url('../fonts/head.ttf');
+}
+
+@font-face
+{
+    font-family: 'para';
+    src: url('../fonts/sleek-1.ttf');
+}
+
+@font-face
+{
+    font-family: 'royal';
+    src: url('../fonts/royal.ttf');
+    font-weight: 400;
+}
+
+
+
+
+/* ---------------------------------------------------------------- Container -------------------------------------------------------------- */
+
+.container
+{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.container .nav
+{
+    position:absolute;
+    top: 0%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.61);
+    z-index: 100;
+    
+}
+
+.container .nav.uni
+{
+    position:fixed;
+    background:white;
+    box-shadow: unset;
+    border-bottom: unset;
+    border-bottom: 1px solid rgba(15, 15, 15, 0.247);
+    box-shadow: 0 0 18px 0 rgb(22, 21, 21);
+
+}
+
+.container .nav.img
+{
+    background: rgba(0, 0, 0, 0.61);
+    box-shadow: unset;
+    border-bottom: unset;
+}
+
+
+
+.container .nav .bars
+{
+    
+    display: none;
+}
+
+.container .nav .logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.container .nav .logo .img
+{
+    max-width:60px;
+    max-height: 60px;
+    object-fit: cover;
+    object-position: center;
+    margin-left:5%;
+}
+
+.container .nav .logo .img img
+{
+    width:100%;
+}
+
+.container .nav .logo .title
+{
+    display:inline-block;
+    align-items: center;
+    color: rgb(63, 5, 5);
+    letter-spacing: 1.5px;
+    padding: 10px;
+}
+
+.container .nav .logo .title span
+{
+   
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'royal';
+    
+}
+
+
+.container .nav .links
+{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    z-index: 100;
+}
+
+.container .nav .links div
+{
+    position: relative;
+    color: black;
+    display:block;
+    white-space:nowrap;
+    align-items: center;
+    padding: 8px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .5s;
+    font-family:'head';
+}
+
+.container .nav .links div.mbl
+{
+    display: none;
+}
+
+
+.container .nav .links div.don
+{
+    all: unset;
+    padding: 12px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-family:'head' !important; 
+    white-space:nowrap;
+    border-radius:30px;
+    background: rgba(0, 0, 0, 0.171);
+    transition: .3s;
+    
+}
+
+.container .nav .links div.don:hover,
+.container .nav .links div.don.active
+{
+    
+    background:black;
+    color:white;
+}
+
+.container .nav .links div.don::before,
+.container .nav .links div.don::after
+{
+    all: unset;
+}
+
+
+
+.container .nav .links div::after
+{
+    position: absolute;
+    content: '';
+    bottom:0;
+    right:0;
+    width: 100%;
+    border-bottom: 3px solid black;
+    background: transparent;
+    opacity: 0;
+    transition: .3s;
+}
+
+.container .nav .links div:hover,
+.container .nav .links div.active
+{
+    color: black;
+  
+}
+.container .nav .links div:hover::after,
+.container .nav .links div.active::after
+{
+    bottom:0;
+    right:0;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------- Master Body ---------------------------------------------------------------- */
+
+div.home .bodymarq
+{
+    font-size: 16px;
+    color: gray;
+    padding: 10px;
+    font-family: 'para';
+    background: whitesmoke;
+    margin: 1%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+div.home div.slides
+{
+    padding: 0;
+    margin: 1%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background: white;
+}
+
+div.home div.vth
+{
+    background: whitesmoke;
+    padding: 10px;
+}
+
+div.home div.vth h1
+{
+    text-align: center;
+    color: #008cba;
+    font-size: 24px;
+    padding: 10px;
+}
+
+div.home div.vth div.cards
+{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+div.home div.vth div.cards div.card
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    margin: 2%;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 gray;
+    transition: .3s;
+}
+
+div.home div.vth div.cards div.card:hover
+{
+    box-shadow: 0 0 10px 0 gray;
+}
+
+div.home div.vth div.cards div.card h1 font
+{
+    color: orange;
+    quotes: inherit;
+}
+
+div.home div.vth div.cards div.card div.data
+{
+    padding: 10px;
+    max-width: 100%;
+    color: gray;
+    font-size: 18px;
+    text-align: center;
+}
+
+div.home div.vth div.cards div.card div.pic
+{
+    position: relative;
+    max-width: 750px !important;
+    max-height: 750px !important;
+    margin: 1%;
+}
+
+div.home div.vth div.cards div.card div.pic.two
+{
+    width : 450px;
+}
+
+div.home div.vth div.cards div.card div.pic img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(90, 90, 90, 0.658);
+    transition: .3s;
+}
+
+div.home div.vth div.cards div.card:hover div.pic img
+{
+    transform: scale(1.02);
+}
+
+div.home div.vth div.cards div.card div.pic div.head
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background: #008cba;
+    color: white
+}
+
+div.footer
+{
+    background: var(--navbg);
+    padding:15px 0;
+    color: white;
+    font-family: 'para';
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+
+}
+div.footer1
+{
+    background: var(--navbg);
+    margin-top: 339px;
+    padding:15px 0;
+    color: white;
+    font-family: 'para';
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+
+}
+div.footer p,
+div.footer1 p
+{
+    padding-top: 5px;
+}
+div.footer p span,
+div.footer1 p span
+{
+    color: rgb(30, 104, 153);
+}
+
+
+
+/* ---------------------------------------------------------- Pagination ----------------------------------------------------------- */
+
+.pages
+{
+    max-width: 100%;
+    margin: 2%;
+    text-align: center;
+}
+
+.pages div
+{
+    padding: 2px;
+    display: inline-block;
+    background: white;
+    text-align: center;
+    width: max-content;
+    margin: 1%;
+    border: 1px solid orange;
+    border-radius: 20px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.pages div:hover
+{
+    background: orange;
+    border: 1px solid orange;
+    box-shadow: 0 2px 5px 0 rgb(102, 102, 102);
+}
+
+.pages div:hover a
+{
+    color: white;
+}
+
+.pages div a
+{
+    color: orange;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+    padding: 10px;
+}
+
+.pages div.active
+{
+    background: orange;
+    border-color: orange;
+    box-shadow: 0 2px 5px 0 rgb(102, 102, 102);
+}
+
+.pages div.active a
+{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+/* ------------------------------------------------------------- About ------------------------------------------------------------- */
+
+div.body div.about
+{
+    margin: 1%;
+    padding: 10px;
+    margin-top: 120px;
+}
+
+div.body div.about div.thumb{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,20% 80%);
+    margin: 2%;
+    padding: 20px;
+    margin-bottom: 0px;
+    background: white;
+}
+div.body div.about div.thumb div.img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+div.body div.about div.thumb div.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .3s;
+}
+div.body div.about div.thumb div.text{
+    max-width:100%;
+    padding:5px;
+}
+div.body div.about div.thumb div.text p
+{
+    color: rgb(0, 0, 0);
+    font-family: 'para';
+    font-size: 20px;
+    padding-left: 50px;
+}
+div.body div.about div.text1{
+    display:block;
+    max-width: 95%;
+    padding:10px;
+    margin: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+div.body div.about div.text1 p
+{
+    color: rgb(0, 0, 0);
+    font-family: 'para';
+    font-size: 20px;
+    padding-left: 20px;
+    margin: 10px;
+}
+
+div.body div.about h1
+{
+    margin-bottom: 2%;
+    letter-spacing: .5px;
+    font-family: 'royal';
+    font-size: 28px;
+}
+div.about h2
+{
+    color:black;
+    text-align: center;
+    font-weight: 200;
+    text-transform: capitalize;
+    font-size: 25px;
+    margin-bottom: 2%;
+    letter-spacing: .5px;
+    font-family: 'royal';
+}
+
+
+/* ------------------------------------------------------------- Notices ----------------------------------------------------- */
+
+
+

@@ -1,0 +1,306 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+div.row div.col div h1::after{
+  position: absolute;
+  content: '';
+  left:10%;
+  bottom:7px;
+  border-bottom: 1px solid black;
+}
+
+
+
+h1 {
+  color:black;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 200;
+  text-transform: capitalize;
+  font-family: 'royal';
+}
+
+
+
+
+div.row div.col {
+  
+  display: -ms-grid;
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+    grid-template-columns: 70% 30%;
+  background: transparent;
+  min-height: 60vh;
+}
+
+div.row div.col div {
+  overflow: hidden;
+  padding-top: 60px;
+  color: --var(navbg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  
+}
+
+div.row div.col div img {
+  position: relative;
+  height: 700px;
+  width:auto;
+  -o-object-fit:contain;
+     object-fit:contain;
+  -o-object-position: center;
+     object-position: center;
+
+}
+
+div.row div.col div img.bg {
+  display: block;
+  position: absolute;
+  left:-15%;
+  opacity: 20%;
+  z-index: -1;
+  
+}
+div.row div.col div.right img.bg {
+  right: unset;
+  top: -5%;
+  z-index: 0;
+  height:700px;
+}
+/*div .text{
+  background-color: rgba(82, 182, 248, 0.521);
+  border-radius: 20px;
+  margin: 0px 60px 0px 60px;
+  padding: 10px 0px 20px 0px;
+  z-index: 1;
+}*/
+
+div.row div.col div h1 {
+  padding: 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  
+}
+div.row div.col button{
+  margin-top: 30px;
+  background: rgba(0, 0, 0);
+  color: #fff;
+  min-width: 180px;
+  font-size: 20px;
+  border: 1px solid transparent;
+  padding: 12px 14px;
+  border: unset;
+  border-radius: 30px;
+  font-family: 'royal';
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 100;
+ 
+
+}
+
+div.row div.col button:hover{
+  color: rgb(214, 202, 202);
+  background: rgb(0, 0, 0);
+  -webkit-box-shadow: 0 0 0 3px rgba(68, 67, 67, 0.397);
+          box-shadow: 0 0 0 3px rgba(70, 69, 69, 0.541);
+
+
+}
+
+
+div.row div.col div p {
+  padding: unset;
+  line-height: 2rem;
+  font-size: 25px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  max-width: 80%;
+}      
+
+div.row div.col div.right {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align:center;
+          align-items:center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 1200px) 
+{
+  h1 {
+    font-size: 18px;
+  }
+  
+
+  
+  div.row div.col {
+    display: grid;
+      grid-template-columns:70% 30%;
+    width: 100%;
+        
+   
+  }
+
+  div.row div.col div img {
+    
+    width:300px;
+    height: auto;
+  }
+
+
+  div.row div.col div h1 {
+    font-size: 18px;
+  }
+  div.row div.col div p {
+    max-width: 90%;
+    font-size: 14px;
+    line-height: unset;
+
+
+  }
+  div.row div.col div h1::after {
+    display: none;
+  }
+  div.row div.col div p b {
+    font-size: 12px;
+  }
+
+  div.row div.col div.right img.bg {
+    opacity: 20%;
+    height: 100%;
+    width: 700px;
+    right:-10%;
+  }
+ 
+
+   
+  div.row div.col div p{
+    margin-bottom: 20%;
+  }
+ 
+
+}
+@media only screen and (max-width: 1500px)
+{
+
+  div.row div.col div h1::after {
+    display:none;
+  } 
+ 
+  
+    
+    /* ------------------------------------------------------------------ about -------------------------------------------------------------- */
+
+
+    div.body div.about
+  {
+    
+    padding: 0px;
+    padding-top:10px;
+  }
+    div.body div.about h1
+    {
+        font-size: 20px;
+    }
+    div.about h2{
+      font-size: 16px;
+    }
+    div.body div.about div.thumb{
+            display: grid;
+            grid-template-columns: 100%;
+            padding-bottom: 0px;
+    }
+    div.body div.about div.thumb div.text p
+    { 
+        font-size: 15px;
+        padding: 0px;
+        margin: 0px;
+    }
+    div.body div.about div.text1 p
+    {
+        font-size: 15px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    div.body div.about div.usercards,
+    div.body div.about div.usercards1
+    {
+        grid-template-columns: 100%;
+        padding: 0px;
+    }
+
+
+    div.body div.about div.usercards div.user,
+    div.body div.about div.usercards1 div.user
+    {
+        margin: 1%;
+        padding: 10px;
+    }
+
+    div.body div.about div.usercards div.user div.profile,
+    div.body div.about div.usercards1 div.user div.profile
+    {
+        width:150px;
+        height:auto;
+        border-radius: 4px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    div.body div.about div.usercards div.user div.star i,
+    div.body div.about div.usercards1 div.user div.star i
+    {
+        top: 6px;
+        right: 6px;
+        font-size: 12px;
+    }
+
+    div.body div.about div.usercards div.user div.data h1.head,
+    div.body div.about div.usercards1 div.user div.data h1.head
+    {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    div.body div.about div.usercards div.user div.data span,
+    div.body div.about div.usercards div.user div.data span
+    {
+        font-size: 15px !important;
+        max-width: 300px !important;
+    }
+
+}
+
+/*# sourceMappingURL=home.css.map */

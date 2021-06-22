@@ -1,0 +1,251 @@
+@media only screen and (max-width: 1200px)
+{
+    /* ------------------------------------------------------------- nav ----------------------------------------------------------------- */
+
+    .container .nav
+    {
+        grid-template-columns: 100%;
+        position: fixed !important;
+    }
+
+    .container .nav.ind
+    {
+        position: absolute;
+        grid-template-columns: 100%;
+        border-bottom: unset;
+        box-shadow: transparent !important;
+    }
+
+    .container .nav .logo,
+    .container .nav.ind.mobile .logo
+    {
+        z-index: 9999;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 1px 10px 0 rgb(102, 102, 102);
+    }
+
+    .container .nav.ind .logo
+    {
+        box-shadow: unset;
+        background: transparent;
+    }
+
+    .container .nav .logo .title span
+    {
+        font-size: 16px;
+    }
+
+
+    .container .nav .logo .bars
+    {
+        display: block;
+        color: rgb(0, 0, 0);
+        padding: 8px;
+        cursor: pointer;
+        position: absolute;
+        right: 0%;
+        margin-right: 10px;
+        transition: .3s ease;
+    }
+
+    .container .nav .logo .bars i
+    {
+        margin: 2%;
+        font-size: 18px;
+    }
+
+    .container .nav .links
+    {
+        position: absolute;
+        top: -600%;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 98%;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: .3s ease-out;
+    }
+
+    .container .nav.mobile .links
+    {
+        position: absolute;
+        top: 100%;
+        /* top: calc(100% + 4px); */
+        background: rgb(255, 255, 255);
+        box-shadow: 0 1px 10px 0 rgb(102, 102, 102);
+
+    }
+
+    .container .nav .logo .bars:hover,
+    .container .nav .logo .bars.active
+    {
+        color: rgba(0, 0, 0, 0.329);
+        font-size: 20px;
+    }
+
+    .container .nav .links,
+    .container .nav .links div
+    {
+        display: block;
+        text-align: center !important; 
+    }
+    
+    .container .nav .links div 
+    {
+        padding-left: initial !important;
+    }
+    
+  
+
+    .container .nav .links div.mbl
+    {
+        display: block;
+    }
+
+    .container .nav .links div:after,
+    .container .nav .links div:before
+    {
+        all: unset;
+    }
+
+    .container .nav .links div.don
+    {
+        all: unset;
+        display: block;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .container .nav .links div,
+    .container .nav .links div.don
+    {
+        padding: 14px;
+        text-align: center;
+
+    }
+
+    .container .nav .links div:hover,
+    .container .nav .links div.active,
+    .container .nav .links div.don:hover
+    {
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+ 
+
+
+
+    div.home div.bg div.center img
+    {
+        width: 80% !important;
+    }
+
+
+    /* --------------------------------------------------------------- Mobile --------------------------------------------------------------- */
+
+    div.home.mobile
+    {
+        display: block;
+        padding: unset !important;
+        margin: unset !important;
+        height: 100%;
+    }
+
+    div.mbl .about
+    {
+        position: relative;
+        padding: 10px;
+        padding-bottom: 5px;
+        color: gray;
+        background: url('../images/404.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        min-height: 81vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+
+    div.mbl .about q,
+    div.mbl .about span
+    {
+        /* border: 1px solid white; */
+        padding: 10px;
+        color: white;
+        text-align: center;
+        font-family: 'royal';
+        max-width: 80%;
+    }
+
+    div.mbl .campaign,
+    div.mbl .about
+    {
+        margin-top: -8px;
+    }
+
+    div.mbl .about div.scroll
+    {
+        position: absolute;
+        bottom: 20%;
+        background: transparent;
+        height: 45px;
+        width: 28px;
+        border: 1px solid white;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    div.mbl .about div.scroll::after
+    {
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 0%;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: white;
+        transform: translateX(-50%);
+        animation: sdown 1s linear infinite;
+    }
+
+    div.mbl .about div.scroll:hover
+    {
+        box-shadow: 0 0 6px white;
+    }
+
+    /* --------------------------------------------------------------- Notices ----------------------------------------------------------- */
+
+    .notices h1
+    {
+        font-size: 20px;
+    }
+    .notices table.notices td{
+        font-size: 13px;
+    }
+
+    div.body div.message div.msg
+    {
+    font-size: 13px;
+    }
+
+
+    
+
+
+
+    /* --------------------------------------------------------------- Footer ----------------------------------------------------------- */
+
+    div.footer
+    {
+        font-size: 14px !important;
+    }
+
+}
